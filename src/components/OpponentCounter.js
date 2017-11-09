@@ -35,7 +35,6 @@ class OpponentCounter extends React.Component {
         <Button 
           title='-3'
           onPress={this.minusThree}
-          color="#841584"
         />
         <Button 
           title='-2'
@@ -44,7 +43,6 @@ class OpponentCounter extends React.Component {
         <Button 
           title='-1'
           onPress={this.minusOne}
-          style={{backgroundColor: "#841584"}}
         />
         <Button 
           title='+1'
