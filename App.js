@@ -1,13 +1,16 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
+import LifeCounter from '/Users/tjchecketts/Desktop/my-projects/magic-life-rn4w/src/components/LifeCounter.js';
+import OpponentCounter from '/Users/tjchecketts/Desktop/my-projects/magic-life-rn4w/src/components/OpponentCounter.js';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        <Text>Magic the Gathering</Text>
+        <Text>Life Counter</Text>
+        <LifeCounter />
+        <OpponentCounter />
       </View>
     );
   }
