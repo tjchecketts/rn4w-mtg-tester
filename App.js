@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
+import BackgroundImage from '/Users/tjchecketts/Desktop/my-projects/rn4w-mtg-tester/BackgroundImage.js';
 import LifeCounter from '/Users/tjchecketts/Desktop/my-projects/rn4w-mtg-tester/src/components/LifeCounter.js';
 import OpponentCounter from '/Users/tjchecketts/Desktop/my-projects/rn4w-mtg-tester/src/components/OpponentCounter.js';
 
