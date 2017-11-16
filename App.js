@@ -8,6 +8,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+      {/* can use flex box to move around the buttons */}
         <Text>Magic the Gathering</Text>
         <Text>Life Counter</Text>
         <LifeCounter />
