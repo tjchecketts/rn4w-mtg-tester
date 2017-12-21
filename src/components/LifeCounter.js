@@ -30,32 +30,36 @@ class LifeCounter extends React.Component {
 
   render() {
     return (
-      <View>
-        <Text>Your Life: {this.state.value}</Text>
-        <Button 
-          title='-3'
-          onPress={this.minusThree}
-        />
-        <Button 
-          title='-2'
-          onPress={this.minusTwo}
-        />
-        <Button 
-          title='-1'
-          onPress={this.minusOne}
-        />
-        <Button 
-          title='+1'
-          onPress={this.plusOne}
-        />
-        <Button 
-          title='+2'
-          onPress={this.plusTwo}
-        />
-        <Button 
-          title='+3'
-          onPress={this.plusThree}
-        />
+      <View >
+        <Text style={{ fontSize: 20 }}>
+          Your Life: {this.state.value}
+        </Text>
+        <View style={{ flexDirection: 'row' }}>
+          <Button 
+            title='-3'
+            onPress={this.minusThree}
+          />
+          <Button 
+            title='-2'
+            onPress={this.minusTwo}
+          />
+          <Button 
+            title='-1'
+            onPress={this.minusOne}
+          />
+          <Button 
+            title='+1'
+            onPress={this.plusOne}
+          />
+          <Button 
+            title='+2'
+            onPress={this.plusTwo}
+          />
+          <Button 
+            title='+3'
+            onPress={this.plusThree}
+          />
+        </View>
       </View>
     )
   }
