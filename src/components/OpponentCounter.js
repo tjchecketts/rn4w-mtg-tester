@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
+import { negs, pos } from '../utils/index';
 
 class OpponentCounter extends React.Component {
   state = { value: 20 }
@@ -15,30 +16,24 @@ class OpponentCounter extends React.Component {
           Opponent's Life: {this.state.value}
         </Text>
         <View style={{ flexDirection: 'row' }}>
-        <Button 
-            title='-3'
-            onPress={() => {this.setHealth(-3)}}
-          />
-          <Button 
-            title='-2'
-            onPress={() => {this.setHealth(-2)}}
-          />
-          <Button 
-            title='-1'
-            onPress={() => {this.setHealth(-1)}}
-          />
-          <Button 
-            title='+1'
-            onPress={() => {this.setHealth(+1)}}
-          />
-          <Button 
-            title='+2'
-            onPress={() => {this.setHealth(+2)}}
-          />
-          <Button 
-            title='+3'
-            onPress={() => {this.setHealth(+3)}}
-          />
+          { negs.map( (i) => {
+            return (
+              <Button 
+                key={i} 
+                title={`${i}`}
+                onPress={() => {this.setHealth(i)}}
+              />
+            )
+          })}
+          { pos.map( (i) => {
+            return (
+              <Button 
+                key={i} 
+                title={`+${i}`}
+                onPress={() => {this.setHealth(i)}}
+              />
+            )
+          })}
         </View>
       </View>
     )
