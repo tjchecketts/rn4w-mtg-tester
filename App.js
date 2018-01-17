@@ -9,8 +9,8 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
       {/* can use flex box to move around the buttons */}
-        <Text style={styles.title}>Magic the Gathering</Text>
-        <Text style={styles.subTitle}>Life Counter</Text>
+        <Text style={[styles.title, styles.style]}>Magic the Gathering</Text>
+        <Text style={[styles.subTitle, styles.style]}>Life Counter</Text>
         <LifeCounter />
         <OpponentCounter />
       </View>
@@ -25,20 +25,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-around',
   },
-  title: {
-    fontSize: 20,
+  style: {
     textAlign: 'center',
     margin: 10,
     color: 'firebrick',
     fontWeight: 'bold',
-    fontSize: 40,
   },
   subTitle: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-    color: 'firebrick',
-    fontWeight: 'bold',
-    fontSize: 30,
+    fontSize: 40,
+  },
+  title: {
+    fontSize: 50,
   }
 });

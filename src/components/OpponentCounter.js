@@ -4,60 +4,40 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 class OpponentCounter extends React.Component {
   state = { value: 20 }
   
-  minusThree = () => {
-    this.setState({ value: this.state.value - 3 })
-  }
-
-  minusTwo = () => {
-    this.setState({ value: this.state.value - 2 })
-  }
-
-  minusOne = () => {
-    this.setState({ value: this.state.value - 1 })
-  }
-
-  plusOne = () => {
-    this.setState({ value: this.state.value + 1 })
-  }
-
-  plusTwo = () => {
-    this.setState({ value: this.state.value + 2 })
-  }
-
-  plusThree = () => {
-    this.setState({ value: this.state.value + 3 })
+  setHealth = (amount) => {
+    this.setState({ value: this.state.value + amount })
   }
 
   render() {
     return (
       <View>
-        <Text style={{ fontSize: 20 }}>
+        <Text style={{ fontSize: 25 }}>
           Opponent's Life: {this.state.value}
         </Text>
         <View style={{ flexDirection: 'row' }}>
-          <Button 
+        <Button 
             title='-3'
-            onPress={this.minusThree}
+            onPress={() => {this.setHealth(-3)}}
           />
           <Button 
             title='-2'
-            onPress={this.minusTwo}
+            onPress={() => {this.setHealth(-2)}}
           />
           <Button 
             title='-1'
-            onPress={this.minusOne}
+            onPress={() => {this.setHealth(-1)}}
           />
           <Button 
             title='+1'
-            onPress={this.plusOne}
+            onPress={() => {this.setHealth(+1)}}
           />
           <Button 
             title='+2'
-            onPress={this.plusTwo}
+            onPress={() => {this.setHealth(+2)}}
           />
           <Button 
             title='+3'
-            onPress={this.plusThree}
+            onPress={() => {this.setHealth(+3)}}
           />
         </View>
       </View>
